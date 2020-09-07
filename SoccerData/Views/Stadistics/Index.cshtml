@@ -1,0 +1,111 @@
+﻿@model IEnumerable<SoccerData.Models.Stadistics>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Stadistics</h1>
+
+<form asp-controller="Stadistics" asp-action="Index" method="get">
+    <p>
+        Search your team stadistics: <input type="text" name="SearchString">
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+<table class="table table-hover thead-light">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.league)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teams_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.home_team)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.away_team)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.result)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.h_final)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.a_final)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.h_half)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.a_half)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.h1h)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.a1h)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.h2h)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.a2h)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.league)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teams_no)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.home_team)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.away_team)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.result)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h_final)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.a_final)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h_half)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.a_half)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h1h)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.a1h)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.h2h)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.a2h)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

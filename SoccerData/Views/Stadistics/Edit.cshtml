@@ -1,0 +1,99 @@
+﻿@model SoccerData.Models.Stadistics
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Stadistics</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="league" class="control-label"></label>
+                <input asp-for="league" class="form-control" />
+                <span asp-validation-for="league" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teams_no" class="control-label"></label>
+                <input asp-for="teams_no" class="form-control" />
+                <span asp-validation-for="teams_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="date" class="control-label"></label>
+                <input asp-for="date" class="form-control" />
+                <span asp-validation-for="date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="home_team" class="control-label"></label>
+                <input asp-for="home_team" class="form-control" />
+                <span asp-validation-for="home_team" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="away_team" class="control-label"></label>
+                <input asp-for="away_team" class="form-control" />
+                <span asp-validation-for="away_team" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="result" class="control-label"></label>
+                <input asp-for="result" class="form-control" />
+                <span asp-validation-for="result" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="h_final" class="control-label"></label>
+                <input asp-for="h_final" class="form-control" />
+                <span asp-validation-for="h_final" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="a_final" class="control-label"></label>
+                <input asp-for="a_final" class="form-control" />
+                <span asp-validation-for="a_final" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="h_half" class="control-label"></label>
+                <input asp-for="h_half" class="form-control" />
+                <span asp-validation-for="h_half" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="a_half" class="control-label"></label>
+                <input asp-for="a_half" class="form-control" />
+                <span asp-validation-for="a_half" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="h1h" class="control-label"></label>
+                <input asp-for="h1h" class="form-control" />
+                <span asp-validation-for="h1h" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="a1h" class="control-label"></label>
+                <input asp-for="a1h" class="form-control" />
+                <span asp-validation-for="a1h" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="h2h" class="control-label"></label>
+                <input asp-for="h2h" class="form-control" />
+                <span asp-validation-for="h2h" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="a2h" class="control-label"></label>
+                <input asp-for="a2h" class="form-control" />
+                <span asp-validation-for="a2h" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
