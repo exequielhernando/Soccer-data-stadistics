@@ -1,0 +1,7 @@
+.vs/
+SoccerData/Migrations/
+SoccerData/Properties/
+SoccerData/bin/
+SoccerData/obj/
+SoccerData/appsettings.Development.json
+SoccerData/appsettings.json
